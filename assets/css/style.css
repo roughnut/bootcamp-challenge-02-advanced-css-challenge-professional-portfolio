@@ -48,6 +48,12 @@ h1 {
   flex-grow: 1;
 }
 
+.avatar {
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -88,7 +94,7 @@ nav:hover .dropdown-menu {
   align-items: flex-end;
   justify-content: center;
   position: absolute;
-  top: 100%;
+  top: 85%;
   right: 0;
   width: 25%;
   background-color: var(--persian-orange); /* Fallback color */
@@ -102,11 +108,11 @@ nav:hover .dropdown-menu {
   );
   z-index: 1;
   padding-right: 2%;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 .dropdown-menu ul {
-  margin: 0;
+  margin-top: 0;
   padding: 3%;
 }
 
@@ -140,14 +146,14 @@ main {
   background-color: var(--hunyadi-yellow);
 }
 
-#about, #portfolio, #contact {
+section {
   position: relative;
   margin-top: 10%;
   width: 95%;
   text-align: center;
   background-color: var(--pumpkin);
   border-radius: 2%;
-  padding-top: 5%;
+  padding: 2%;
 }
 
 #about img {
@@ -206,10 +212,22 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--hunyadi-yellow);
 }
 
 /* When viewport is larger than 768px */
 @media screen and (min-width: 768px) {
+
+  header {
+    height: 8%;
+    padding: 2%;
+  }
+
+  .avatar {
+  max-width: 4%;
+  height: auto;
+  border-radius: 50%;
+}
 
   .hamburger-menu, nav:hover .dropdown-menu {
     display: none;
@@ -242,4 +260,16 @@ footer {
   li a:hover {
     color: var(--pumpkin);
   }
+
+  #other-work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .other-work-overlay {
+    margin: 1%;
+  }
+
 }

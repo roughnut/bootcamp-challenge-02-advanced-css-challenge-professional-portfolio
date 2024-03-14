@@ -12,7 +12,7 @@ Also included below is my [Process & Learnings](#process-learnings) section.
 
 ## Usage
 
-Site to be deployed on Github pages once completed
+The site is deployed to [Github pages HERE](https://roughnut.github.io/bootcamp-challenge-02-advanced-css-challenge-professional-portfolio/ "link to deployed site")
 
 <a id="user-story"></a>
 
@@ -75,4 +75,60 @@ I applied normalize.css using a CDN in the `<head>`
 
 5. I want to build this site with a mobile-first design so `@media` queries will apply `min-width` properties to apply a single column layout until the viewport is larger than 768px.
 
-6.
+6. Since mobile first was the aim, I spent some (a little too much) learning how to make a hamburger menu using vanilla HTML and CSS and a text menu for when the media size increased. I got it done eventually.
+
+```html
+<nav>
+    <ul class="hamburger-menu">
+        <li class="menu-hover"></li>
+        <li class="menu-hover"></li>
+        <li class="menu-hover"></li>
+    </ul>
+    <div class="dropdown-menu">
+        <ul >
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="wider-menu">
+        <ul >
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+ </nav>
+```
+
+7. The CSS had to allow the cursor to hover over the menu and display a container using `position: absolute` - I learned a bit about `background-image: linear-gradient` and `z-index` along the way
+
+```css
+nav:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 85%;
+  right: 0;
+  width: 25%;
+  background-color: var(--persian-orange); /* Fallback color */
+  background-image: linear-gradient(
+    45deg,
+    #ca8d61ff,
+    #450f09ff,
+    #f67729ff,
+    #70565cff,
+    #f9bf69ff
+  );
+  z-index: 1;
+  padding-right: 2%;
+  font-size: 1.1em;
+}
+```
+
+8. Flexbox was applied to position pretty much everything else apart from the text overlays on the portfolio projects.  
+
+THANK YOU :pray:
+
